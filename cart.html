@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background-color: #343a40;
+            font-family: Garamond, sans-serif;
+            color: #ffc107;
+            padding-top: 80px;
+        }
+
+        .cart-container {
+            margin-top: 50px;
+        }
+
+        .cart-header {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .cart-item {
+            background: #343a40;
+            border: 3px solid #ffc107; 
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+        }
+
+        .cart-item img {
+            width: 80px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .cart-item-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .cart-item-price {
+            font-size: 1rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .quantity-input {
+            width: 50px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        .cart-summary {
+            background: #343a40;
+            border: 3px solid #ffc107; 
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .checkout-btn {
+            width: 100%;
+            padding: 10px;
+            background: black;
+            color: white;
+            text-transform: uppercase;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            display: block;
+            text-align: center;
+        }
+
+        .checkout-btn:hover {
+            background: #333;
+        }
+
+        p {
+            color: white;
+        }
+
+        .cart-summary strong {
+            color: #ffc107;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning fixed-top" id="mainNav">
+        <div class="container px-4">
+            <a class="navbar-brand" href="index.html">Suzanne Collins</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">Series</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Books.html">Books</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#books">My Cart</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5 cart-container">
+        <h2 class="cart-header">Your Cart (1 item)</h2>
+
+        <!-- Cart Items -->
+        <div class="row">
+            <div class="col-md-8">
+                <div class="cart-item d-flex align-items-center">
+                    <img src="hungergames.jpg" alt="The Hunger Games Book Cover">
+                    <div class="ms-3">
+                        <div class="cart-item-title">The Hunger Games</div>
+                        <div class="cart-item-price">$15.00</div>
+                        <div><small>Paperback</small></div>
+                    </div>
+                    <div class="ms-auto">
+                        <label for="quantity" class="visually-hidden">Quantity</label>
+                        <input type="number" class="quantity-input" id="quantity" value="1" min="1">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cart Summary -->
+            <div class="col-md-4">
+                <div class="cart-summary">
+                    <p><strong>Subtotal:</strong> $15.00</p>
+                    <p><strong>Sales Tax:</strong> $1.50</p>
+                    <p><strong>Grand Total:</strong> $16.50</p>
+                    <a href="checkout.html" class="checkout-btn">Check Out</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
